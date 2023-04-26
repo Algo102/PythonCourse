@@ -19,3 +19,10 @@ if n1+n2+n3 == n4+n5+n6:
         f"УРА!! Ваш билет с номером {n}, счастливый, можно кушать")
 else:
     print('Oh no ((((')
+
+# Другой вариант
+n = input()
+if int(n[0]) + int(n[1]) + int(n[2]) == int(n[3]) + int(n[4]) + int(n[5]):
+    print('Yes')
+else:
+    print("No")
