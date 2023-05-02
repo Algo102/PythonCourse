@@ -32,8 +32,17 @@ for i in range(numbers):
     if min > set_1[i]:
         min = set_1[i]
         pos = i
-        
+
 print("Ближайшая цифра к вашему числу: ",
       list_1[pos])
 print(
     f"Она находится на позиции {pos+1} и разница с вашим числом, составляет {min}")
+
+# Другое решение
+m = abs(find - list_1[0]) # модуль числа
+min2 = list_1[0]
+for i in range(1, len(list_1)):
+    if m > abs(list_1[i] - find):
+        m = abs(list_1[i] - find)
+        min2 = list_1[i]
+print(min2)

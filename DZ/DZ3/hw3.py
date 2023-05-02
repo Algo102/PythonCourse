@@ -65,3 +65,21 @@ print(count)
         
 # print(list_1)
 # print(count)
+
+
+# ДРУГОЕ РЕШЕНИЕ
+dict_en = {1: 'AEIOULNSTR', 2: 'DG', 3: 'BCMP', 4: 'FHVWY', 5: 'K', 8: 'JZ', 10: 'QZ'}
+dict_ru = {1: 'АВЕИНОРСТ', 2: 'ДКЛМПУ', 3: 'БГЁЬЯ', 4: 'ЙЫ', 5: 'ЖЗХЦЧ', 8: 'ШЭЮ', 10: 'ФЩЪ'}
+word2 = input().upper() # перевод букв в верхний регистр
+count2 = 0
+for i in word:
+    if i in 'QWERTYUIOPASDFGHJKLZXCVBNM':
+        for j in dict_en:
+            if i in dict_en[j]:
+                count2 = count2 + j
+    else:
+        for j in dict_ru:
+            if i in dict_ru[j]:
+                count2 = count2 + j
+
+print(count2)        
