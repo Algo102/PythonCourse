@@ -10,9 +10,21 @@
 
 list1 = input(
     "Введите фразы разделяя их пробелами ")
+list2 = list(list1.split())
+print(list2)
+glasn = ['а', 'и', 'е', 'о', 'у', 'э', 'ю', 'я', 'ы']
 
-res = list(map(str, list1.split()))
+res = list()
+flag = True
 
-res1 = list(filter(lambda x: 'а' in x or 'и' in x, res))
-print(res)
-print(res1)
+for i in range(len(list2)):
+    res.append(list(filter(lambda x: x in glasn, list2[i])))
+    if i > 0 and len(res[i]) != len(res[0]):
+        flag = False
+
+print(flag)
+print('Гласных во фразах: ', res)
+if flag:
+    print('Ура: ''Парам пам-пам')
+else:
+    print('О нет ', 'Пам парам')
